@@ -39,4 +39,6 @@ workflows:
     #       cron: "0 17 * * 3"
     jobs:
       - install
-      - run
+      - run:
+          requires:
+            - install    
