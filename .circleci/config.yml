@@ -34,9 +34,13 @@ jobs:
 workflows:
   version: 2
   install-run:
-    # triggers:
-    #   - schedule:
-    #       cron: "0 17 * * 3"
+    triggers:
+      - schedule:
+          cron: "0 17 * * 3"
+          filters:
+            branches:
+              only:
+                - main
     jobs:
       - install
       - run:
