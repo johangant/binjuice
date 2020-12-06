@@ -36,7 +36,7 @@ workflows:
   install-run:
     triggers:
       - schedule:
-          cron: "0 17 * * 3"
+          cron: "0 9 * * 3"
           filters:
             branches:
               only:
